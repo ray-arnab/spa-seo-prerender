@@ -76,7 +76,7 @@ The components in play here are:
 
 ### Setup
 
-1. Spring boot application
+#### Spring boot application
 
 Run as:
 ```
@@ -86,7 +86,7 @@ mvn spring-boot:run
 It starts on port 8083 and can be directly accessed as http://localhost:8083
 
 
-2. Apache Http Server
+#### Apache Http Server
 
 I have used Apache 2.2 on Windows machine.
 
@@ -122,7 +122,7 @@ b) The vhost entry is given below:
 c) Introduce a host file entry for local.spa.com mapped to localhost.
 
 
-3. Prerender IO
+#### Prerender IO
 
 Prerequiste: To install and run the same one will need npm and cygwin (for Windows)
 
