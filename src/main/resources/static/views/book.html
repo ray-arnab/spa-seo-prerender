@@ -1,0 +1,24 @@
+<div class="jumbotron text-center">
+	<h1>Book</h1>
+
+	<p>{{ message }}</p>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a ui-sref="book.plan"><i class="fa"></i> Plan</a></li>
+                <li><a ui-sref="book.select"><i class="fa"></i> Select</a></li>
+                <li><a ui-sref="book.travelers"><i class="fa"></i> Travelers</a></li>
+                <li><a ui-sref="book.payment"><i class="fa"></i> Payment</a></li>
+                <li><a ui-sref="book.confirmation"><i class="fa"></i> Confirmation</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="book">
+        <div ui-view></div>
+    </div>
+
+
+</div>
+

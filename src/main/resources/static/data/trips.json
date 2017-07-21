@@ -1,0 +1,92 @@
+[{
+    "id": "12344",
+    "pnr": "XXYXXA",
+    "bounds": {
+        "outbound": {
+            "origin": "ARN",
+            "destination": "CPH",
+            "segments": [{
+                "origin": "ARN",
+                "destination": "OSL",
+                "airline": "SK-123"
+            }, {
+                "origin": "OSL",
+                "destination": "CPH",
+                "airline": "SK-122"
+            }]
+        },
+        "inbound": {
+            "origin": "CPH",
+            "destination": "ARN",
+            "segments": [{
+                "origin": "CPH",
+                "destination": "ARN",
+                "airline": "SK-121"
+            }]
+        }
+    },
+    "travelers": [{
+            "fname": "Arnab",
+            "lname": "Ray",
+            "sex": "M",
+            "age": "34 years"
+        }, {
+            "fname": "Sohini",
+            "lname": "Gupta",
+            "sex": "F",
+            "age": "34 years"
+        }, {
+            "fname": "Sumedha",
+            "lname": "Ray",
+            "sex": "F",
+            "age": "5 years"
+        }
+                  
+    ]
+},
+{
+    "id": "12345",
+    "pnr": "AHSJJNJ",
+    "bounds": {
+        "outbound": {
+            "origin": "ARN",
+            "destination": "CPH",
+            "segments": [{
+                "origin": "ARN",
+                "destination": "OSL",
+                "airline": "SK-123"
+            }, {
+                "origin": "OSL",
+                "destination": "CPH",
+                "airline": "SK-122"
+            }]
+        },
+        "inbound": {
+            "origin": "CPH",
+            "destination": "ARN",
+            "segments": [{
+                "origin": "CPH",
+                "destination": "ARN",
+                "airline": "SK-121"
+            }]
+        }
+    },
+    "travelers": [{
+            "fname": "Arnab",
+            "lname": "Ray",
+            "sex": "M",
+            "age": "34 years"
+        }, {
+            "fname": "Sohini",
+            "lname": "Gupta",
+            "sex": "F",
+            "age": "34 years"
+        }, {
+            "fname": "Sumedha",
+            "lname": "Ray",
+            "sex": "F",
+            "age": "5 years"
+        }
+                  
+    ]
+}]

@@ -1,0 +1,11 @@
+<h2>Upcoming trips</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+    	<th>PNR</th>
+    	<th>Details</th>
+    </tr>
+    <tr ng-repeat="trip in trips" ui-sref="myTrips.detail({id:trip.id})">
+    	<td>{{trip.pnr}}</td>
+    	<td>Other details</td>
+	</tr>
+</table>

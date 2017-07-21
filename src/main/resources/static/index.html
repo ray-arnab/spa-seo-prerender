@@ -1,0 +1,51 @@
+<!doctype html>
+<html data-ng-app="companySPA" data-ng-controller="baseController">
+	<head>
+		<meta charset="utf-8"/>
+		<title>SPA Demo | {{ seo.pageTitle }}</title>
+		<meta name="description" content="{{ seo.pageDescription }}"/>
+		
+		<meta name="keywords"/>
+		<link rel="icon"/>
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+
+
+	</head>
+	
+	<body>
+	
+		<div>
+
+			  <nav class="navbar navbar-default">
+				<div class="container">
+				  <div class="navbar-header">
+					<a class="navbar-brand" href="#">SPA Demo App</a>
+				  </div>
+
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a ui-sref="book"><i class="fa"></i> Book</a></li>
+					<li><a ui-sref="checkIn"><i class="fa"></i> Check In</a></li>
+					<li><a ui-sref="myTrips"><i class="fa"></i> My Trips</a></li>
+				  </ul>
+				</div>
+			  </nav>
+
+			  <div id="main">
+				<div ui-view></div>
+			  </div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		
+		<script src="js/core/main.js"></script>
+		<script src="js/core/baseController.js"></script>
+		<script src="js/core/routingService.js"></script>
+		<script src="js/services/myTripsService.js"></script>
+		<script src="js/controllers/bookController.js"></script>
+		<script src="js/controllers/checkInController.js"></script>
+		<script src="js/controllers/myTripsController.js"></script>
+	</body>
+</html>
