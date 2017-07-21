@@ -10,6 +10,7 @@ Here is a demonstration of how this may be solved using prerender.io.
 References: 
 
 https://developers.google.com/webmasters/ajax-crawling/docs/specification
+
 https://prerender.io/js-seo/angularjs-seo-get-your-site-indexed-and-to-the-top-of-the-search-results/
 
 
@@ -19,7 +20,9 @@ https://prerender.io/js-seo/angularjs-seo-get-your-site-indexed-and-to-the-top-o
 Typically user navigation of a SPA would result in URLs such as the ones given below:
 
 http://local.spa.com/index.html#/book
+
 http://local.spa.com/index.html#/checkIn
+
 http://local.spa.com/index.html#/myTrips
 
 
@@ -28,24 +31,24 @@ As one navigates through the menu, one can see using a browser dev tool that the
 
 But the page source remains the same because the page is not loading again per view, and one will find placeholders in title and description:
 
-<pre>
+```
 
 <title>SPA Demo | {{ seo.pageTitle }}</title>
 <meta name="description" content="{{ seo.pageDescription }}"/>
 
-</pre>
+```
 
-The crawlers cannot execute javascript, so they get this 'page-source' view of the request URL.
+The crawlers cannot execute javascript, so they get this 'page-source' view of the request.
 
 
 
 ## Solution
 
-The application needs to use hash-bang (#!) URLs instead of hash (#) as shown below:
+The application needs to use hash-bang (#!) URLs instead of hash (#):
 
 http://local.spa.com/index.html#!/book
 
-In that case, the crawler may request each view using 'ugly' URLs as shown below:
+In that case, the crawler may request each view using 'ugly' URLs:
 
 http://local.spa.com/index.html?_escaped_fragment_=/book
 
@@ -53,8 +56,8 @@ The ask is, as response to the above request, the server side infrastructure pro
 
 The components in play here are:
 
-1. A SPA (built using Spring boot)
-2. Prerender.io setup in local
+1. A SPA (this application built using Spring boot)
+2. Prerender.io
 3. Apache Http Server
 
 
@@ -63,7 +66,7 @@ The components in play here are:
 
 1. Request hits Apache
 
-2. Evaluate if there is a query parameter: _escaped_fragment_
+2. Evaluate if there is a query parameter: `_escaped_fragment_`
 
 3. If yes, proxy the request to back-end prerender.io
 
@@ -76,9 +79,9 @@ The components in play here are:
 1. Spring boot application
 
 Run as:
-<pre>
+```
 mvn spring-boot:run
-</pre>
+```
 
 It starts on port 8083 and can be directly accessed as http://localhost:8083
 
@@ -91,7 +94,7 @@ a) Ensure you have mod_proxy and mod_rewite enabled in httpd.conf
 
 b) The vhost entry is given below:
 
-<pre>
+```
 
 	<VirtualHost *:80>
 		ServerAdmin webmaster@spa.com
@@ -114,7 +117,7 @@ b) The vhost entry is given below:
 		CustomLog "logs/spa.com-access.log" common    
 	</VirtualHost>
 
-</pre>
+```
 
 c) Introduce a host file entry for local.spa.com mapped to localhost.
 
