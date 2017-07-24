@@ -57,6 +57,7 @@ The ask is, as response to the above request, the server side infrastructure pro
 The components in play here are:
 
 1. A SPA (this application built using Spring boot)
+	- This application is built using angularjs, where the necessary meta values are supplied using scoped variables. 
 2. Prerender.io
 3. Apache Http Server
 
@@ -124,7 +125,7 @@ c) Introduce a host file entry for local.spa.com mapped to localhost.
 
 #### Prerender IO
 
-Prerequiste: To install and run the same one will need npm and cygwin (for Windows)
+Prerequiste: To install and run the same one will need npm and cygwin (for Windows). By default, it starts on port 3000.
 
 Reference: https://github.com/prerender/prerender
 
